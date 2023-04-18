@@ -4,8 +4,8 @@ import java.awt.*;
 import java.util.Observable;
 
 /**
- * Основной класс модели робота, который представляет робота и его перемещение к цели.
- * Реализует интерфейс Observer, чтобы следить за изменениями позиции цели и оповещать об этом наблюдателей.
+ * Основной класс модели робота, который представляет робота и его перемещение к точки.
+ * Реализует интерфейс Observer, чтобы следить за изменениями позиции точки и оповещать об этом наблюдателей.
  */
 public class ModelRobot extends Observable {
     private volatile double m_robotPositionX = 100;
@@ -22,9 +22,9 @@ public class ModelRobot extends Observable {
     public static final String key_target_pos_changed = "target position changed";
 
     /**
-     * Устанавливает новую позицию цели.
+     * Устанавливает новую позицию точки.
      *
-     * @param p новая позиция цели
+     * @param p новая позиция точки
      */
     public void setTargetPosition(Point p)
     {
